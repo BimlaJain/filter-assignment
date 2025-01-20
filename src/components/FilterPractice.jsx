@@ -14,7 +14,9 @@ const FilterPractice = () => {
     const filterData = data.filter((item) => {
         const query = searchQuery;
         return (
-            item.firstName.includes(query)
+            item.firstName.includes(query) ||
+            item.lastName.includes(query) ||
+            item.email.includes(query)
     )
 })
     return (
