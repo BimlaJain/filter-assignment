@@ -16,6 +16,9 @@ module.exports = {
           "2xl": "1328px"
         },
       },
+      colors: {
+        "lightgrey": "#333333"
+      }
 
     },
   },
