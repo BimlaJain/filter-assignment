@@ -30,13 +30,13 @@ const HomePage = () => {
     <div className="min-h-screen">
       <div className="container">
       <Header />
-      <div className="flex items-center justify-center gap-1 py-2 mt-4 max-2xl:overflow-x-auto">
+      <div className="flex items-center xl:justify-center gap-1 py-2 mt-4 max-2xl:overflow-x-auto">
         {tabs.map((tabName) => (
           <button
             key={tabName}
             onClick={() => handleTabClick(tabName)}
             className={`px-3 py-[2px] rounded ${tab === tabName
-                ? "bg-black text-white"
+                ? "!bg-black !text-white"
                 : "text-gray-800 border border-black rounded-lg"
               }`}
           >
