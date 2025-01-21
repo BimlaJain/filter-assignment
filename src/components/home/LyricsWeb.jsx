@@ -8,7 +8,7 @@ const HomePage = () => {
   const [girlName, setGirlName] = useState('');
 
   const [searchParams, setSearchParams] = useSearchParams();
-  const tab = searchParams.get("tab") ;
+  const tab = searchParams.get("tab");
   const letter = searchParams.get("letter");
 
   const tabs = ["All", "Pop", "Rock", "More"];
@@ -17,7 +17,7 @@ const HomePage = () => {
   const handleTabClick = (tabName) => {
     const lowerCaseTabName = tabName.toLowerCase();
     setTabData(lowerCaseTabName);
-    setHeading(lowerCaseTabName); 
+    setHeading(lowerCaseTabName);
     setSearchParams({ tab: lowerCaseTabName, letter });
   };
 
@@ -30,12 +30,12 @@ const HomePage = () => {
     <div className="min-h-screen">
       <div className="container">
       <Header />
-      <div className="flex items-center space-x-4 py-2 max-2xl:overflow-x-auto">
+      <div className="flex items-center justify-center gap-1 py-2 mt-4 max-2xl:overflow-x-auto">
         {tabs.map((tabName) => (
           <button
             key={tabName}
             onClick={() => handleTabClick(tabName)}
-            className={`px-4 py-2 rounded ${tab === tabName
+            className={`px-3 py-[2px] rounded ${tab === tabName
                 ? "bg-black text-white"
                 : "text-gray-800 border border-black rounded-lg"
               }`}
@@ -47,7 +47,7 @@ const HomePage = () => {
           <button
             key={char}
             onClick={() => handleLetterClick(char)}
-            className={`px-[11px] py-1 rounded ${letter === char
+            className={`px-2 py-1 rounded ${letter === char
                 ? "bg-black text-white rounded-full"
                 : "text-gray-800"
               }`}
