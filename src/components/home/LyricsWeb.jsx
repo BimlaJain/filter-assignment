@@ -8,16 +8,17 @@ const HomePage = () => {
   const [girlName, setGirlName] = useState('');
 
   const [searchParams, setSearchParams] = useSearchParams();
-  const tab = searchParams.get("tab") || "All";
-  const letter = searchParams.get("letter") || "A";
+  const tab = searchParams.get("tab") ;
+  const letter = searchParams.get("letter");
 
   const tabs = ["All", "Pop", "Rock", "More"];
   const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
   const handleTabClick = (tabName) => {
-    setTabData(tabName);
-    setHeading(tabName); 
-    setSearchParams({ tab: tabName, letter });
+    const lowerCaseTabName = tabName.toLowerCase();
+    setTabData(lowerCaseTabName);
+    setHeading(lowerCaseTabName); 
+    setSearchParams({ tab: lowerCaseTabName, letter });
   };
 
   const handleLetterClick = (letter) => {
