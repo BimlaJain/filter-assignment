@@ -1,53 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react'
+import CustomButton from '../../common/CustomButton'
+import { Search } from '../../utils/icons'
 
 const Header = () => {
+    const handleSubmit = (e) => (
+        e.preventDefault()
+    )
     return (
-        <div className="bg-white px-4">
-            <header className="flex flex-wrap items-center justify-between px-4 py-4 bg-white shadow-2xl rounded-[20px]">
-                <a href="#" className="flex-shrink-0">
-                    <img
-                        src="../assets/images/png/logo.png"
-                        alt="logo"
-                        className="h-8 sm:h-10"
-                    />
-                </a>
-                <div className="hidden lg:flex  flex-grow max-w-[650px] items-center mx-4 px-4 py-3 border rounded-full">
-                    <input
-                        type="text"
-                        placeholder="What do you feel like listening to right now?"
-                        className="flex-grow text-lightgrey placeholder:text-lightgrey focus:outline-none"
-                    />
-                    <img
-                        src="../assets/images/svg/search.svg"
-                        alt="search"
-                        className="w-6 h-6 ml-2"
-                    />
+        <div className='max-w-[1160px] mx-auto px-4'>
+            <div className='w-full flex items-center justify-between shadow-[0px_10px_10px_0px] shadow-lightGray rounded-[20px] pl-[38px] pr-3 py-[10px] gap-4 max-md:px-3'>
+                <a href="#logo"><img src="../assets/images/png/logo.png" alt="logo" className='md:h-[26.42px] ' /></a>
+                <form onSubmit={handleSubmit} className='border border-gray max-w-[650px] max-md:hidden max-xl:max-w-[500px] max-lg:max-w-[300px] w-full rounded-full flex items-center pr-[7px] overflow-hidden'>
+                    <input type="text" placeholder='What do you feel like listening to right now ?' className='w-[95%] px-[30px] pt-[13px] pb-[14px] outline-none !text-lightBlack placeholder:text-lightBlack' />
+                    <CustomButton icon={<Search myClass="transition-all duration-300 group-hover:fill-black" />} myClass="group flex items-center justify-center hover:!bg-white !rounded-full py-[10.34px] px-[10.34px] !bg-customBlack" />
+                </form>
+                <CustomButton icon={<Search myClass="transition-all duration-300 group-hover:fill-black" />} myClass="flex group hover:!bg-white items-center md:hidden justify-center !rounded-full !py-[10.34px] !px-[10.34px] !bg-customBlack" />
+                <div className='flex items-center gap-5 max-sm:gap-2'>
+                    <CustomButton text="Login" myClass="!border-none text-customBlack !font-normal hover:bg-black px-[25px] py-[9px]  hover:text-white transition-all duration-500" />
+                    <CustomButton text="Sign Up" myClass="!bg-customBlack px-[26px] py-[9.5px] text-white !border-none hover:!bg-transparent hover:text-black transition-all duration-500" />
                 </div>
-                <div className="flex gap-3 items-center max-lg:mt-4 mx-auto">
-                    <button className="px-6 py-2 text-sm sm:text-base hover:text-white hover:bg-black rounded-lg transition-all duration-500 ease-in-out">
-                        Login
-                    </button>
-                    <button className="px-6 py-2 text-sm sm:text-base bg-black text-white hover:bg-white hover:text-black rounded-lg transition-all duration-500 ease-in-out">
-                        Sign Up
-                    </button>
-                </div>
-                <div className="lg:hidden mt-4 flex w-full justify-between">
-                    <div className="flex flex-grow items-center max-w-full px-4 py-2 border rounded-full">
-                        <input
-                            type="text"
-                            placeholder="Search..."
-                            className="flex-grow text-lightgrey placeholder:text-lightgrey  focus:outline-none text-sm"
-                        />
-                        <img
-                            src="../assets/images/svg/search.svg"
-                            alt="search"
-                            className="size-7 ml-2"
-                        />
-                    </div>
-                </div>
-            </header>
+            </div>
         </div>
-    );
-};
+    )
+}
 
-export default Header;
+export default Header

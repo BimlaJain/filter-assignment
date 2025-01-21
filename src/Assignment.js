@@ -17,7 +17,7 @@ const divide = age.filter((age) => age % 5 === 0)
 console.log("number divide by 5=", divide)
 
 // Assignment-5
-let startTable = 3
+let startTable = 5
 let endTable = 10
 function multiplyTable(start, end) {
     for (let i = start; i <= end; i++) {
@@ -42,12 +42,63 @@ for (let i = EndValue.charCodeAt(0); i >= StartValue.charCodeAt(0); i--) {
 
 let alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 let print = "";
-for (let i = 0; i < alphabet.length; i++){
+for (let i = 0; i < alphabet.length; i++) {
     print += alphabet[i];
-    console.log(print)
 }
+console.log(print)
 let reversed = "";
-for (let i = alphabet.length - 1; i >= 0; i--){
+for (let i = alphabet.length - 1; i >= 0; i--) {
     reversed += alphabet[i];
-    console.log(reversed)
 }
+console.log(reversed)
+
+// Assingment-2
+let countVowelsConsonant = ["a", "b", "c", "d", "e", "i", "o", "u", "r"];
+function countVowelsAndConsonants(arr) {
+    let vowelCount = 0;
+    let consonantCount = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        let char = arr[i];
+        if (char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u') {
+            vowelCount++;
+        } else {
+            consonantCount++;
+        }
+    }
+
+    return { vowelCount, consonantCount };
+}
+
+let counts = countVowelsAndConsonants(countVowelsConsonant);
+console.log(`Vowels: ${counts.vowelCount}, Consonants: ${counts.consonantCount}`);
+
+
+
+
+
+
+
+
+// let countVowelsConsonant = ["a", "b", "c", "d", "e", "i", "o", "u", "r"];
+// TODO's
+// // 1. Write a program to count the number of vowels and consonants in the given array:
+// // 2. Check if a given character (e.g., "z") is a vowel or a consonant.
+
+// Function to count the number of vowels and consonants in the given array
+
+// Function to check if a given character is a vowel or a consonant
+function checkCharacter(char) {
+    if (char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u') {
+        return `${char} is a vowel.`;
+    } else {
+        return `${char} is a consonant.`;
+    }
+}
+
+// Example usage:
+// let counts = countVowelsAndConsonants(countVowelsConsonant);
+// console.log(`Vowels: ${counts.vowelCount}, Consonants: ${counts.consonantCount}`);
+
+let charToCheck = 'z';
+console.log(checkCharacter(charToCheck));
