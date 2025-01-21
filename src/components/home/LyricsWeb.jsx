@@ -46,7 +46,7 @@ const HomePage = () => {
           <button
             key={char}
             onClick={() => handleLetterClick(char)}
-            className={`px-2 py-1 rounded ${letter === char
+            className={`px-[11px] py-1 rounded ${letter === char
                 ? "bg-black text-white rounded-full"
                 : "text-gray-800"
               }`}
@@ -58,7 +58,7 @@ const HomePage = () => {
       <div className="flex flex-col items-center py-[43px] md:px-4">
         <div className="flex flex-col md:flex-row lg:pl-12 lg:pr-[43px] bg-black text-white p-6 pt-[36px] rounded-lg max-w-[1141px] w-full">
           <div className="md:w-2/3 w-full">
-            <h1 className="lg:text-5xl md:text-3xl text-2xl font-bold md:mb-24 mb-8 max-sm:text-center">hit me hard and soft {heading}</h1>
+            <h1 className="lg:text-[44px] md:text-3xl text-2xl font-bold md:mb-24 mb-8 max-sm:text-center uppercase">hit me hard and soft {heading}</h1>
             <div className="md:flex items-center gap-7 md:relative">
               <img className="md:absolute lg:top-[8%] max-lg:pt-32 max-sm:pt-0  max-sm:flex max-sm:mx-auto" src="../assets/images/png/girl-dp.png" alt="girl-dp" />
               <div className="flex-col md:absolute xl:left-[33%] md:left-[49%] top-[5%] lg:mt-12 md:mt-8">
