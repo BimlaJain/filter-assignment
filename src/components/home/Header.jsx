@@ -11,7 +11,7 @@ const Header = () => {
                         className="h-8 sm:h-10"
                     />
                 </a>
-                <div className="hidden lg:flex  flex-grow max-w-[650px] items-center mx-4 px-4 py-2 border rounded-full">
+                <div className="hidden lg:flex  flex-grow max-w-[650px] items-center mx-4 px-4 py-3 border rounded-full">
                     <input
                         type="text"
                         placeholder="What do you feel like listening to right now?"

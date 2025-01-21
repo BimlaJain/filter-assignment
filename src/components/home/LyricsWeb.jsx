@@ -26,9 +26,10 @@ const HomePage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen">
+      <div className="container">
       <Header />
-      <div className="lg:flex max-lg:flex-col justify-center space-x-4 bg-gray-200 py-2 overflow-auto">
+      <div className="flex items-center space-x-4 py-2 max-2xl:overflow-x-auto">
         {tabs.map((tabName) => (
           <button
             key={tabName}
@@ -41,8 +42,6 @@ const HomePage = () => {
             {tabName}
           </button>
         ))}
-      
-      <div className="flex justify-center space-x-2 bg-gray-100 py-2 overflow-x-auto ">
         {alphabet.map((char) => (
           <button
             key={char}
@@ -56,9 +55,8 @@ const HomePage = () => {
           </button>
         ))}
         </div>
-        </div>
-      <div className="flex flex-col items-center py-10 px-4">
-        <div className="flex flex-col md:flex-row lg:pl-12 lg:pr-[43px] bg-black text-white p-6 rounded-lg max-w-[1141px] w-full mt-10">
+      <div className="flex flex-col items-center py-[43px] md:px-4">
+        <div className="flex flex-col md:flex-row lg:pl-12 lg:pr-[43px] bg-black text-white p-6 pt-[36px] rounded-lg max-w-[1141px] w-full">
           <div className="md:w-2/3 w-full">
             <h1 className="lg:text-5xl md:text-3xl text-2xl font-bold md:mb-24 mb-8 max-sm:text-center">hit me hard and soft {heading}</h1>
             <div className="md:flex items-center gap-7 md:relative">
@@ -69,11 +67,12 @@ const HomePage = () => {
               </div>
            </div>
           </div>
-          <div className="md:w-1/3 w-full max-sm:pt-6">
-           <img src="../assets/images/png/girl-hero.png" alt="hero-girl" className="fmax-sm:lex max-sm:mx-auto" />
+          <div className="md:w-1/3 w-full max-sm:pt-6 flex justify-end">
+           <img src="../assets/images/png/girl-hero.png" alt="hero-girl" className="max-sm:flex max-sm:mx-auto" />
           </div>
         </div>
-      </div>
+        </div>
+        </div>
     </div>
   );
 };
