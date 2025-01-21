@@ -36,8 +36,8 @@ const HomePage = () => {
             key={tabName}
             onClick={() => handleTabClick(tabName)}
             className={`px-3 py-[2px] rounded ${tab === tabName
-                ? "!bg-black !text-white"
-                : "text-gray-800 border border-black rounded-lg"
+                ? "bg-black text-white"
+              : "text-gray-800 border border-black rounded-lg hover:bg-black hover:text-white"
               }`}
           >
             {tabName}
