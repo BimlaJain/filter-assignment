@@ -46,11 +46,11 @@ const Hero = () => {
     <div className="pt-[11px] pb-12 bg-off-white lg:h-screen">
       <div className="container mx-auto">
       <Header />
-        <div className="flex justify-center items-center gap-[15px] pt-[17px] max-xl:overflow-x-auto pb-2">
+        <div className="flex xl:justify-center items-center gap-[15px] pt-[17px] max-xl:overflow-x-auto pb-2">
           <div className="flex items-center gap-[5px]">
             <CustomButton
               customOnClick={() => handleTextChange("all")}
-              myClass={`${selectedCategory === "all" ? "bg-customBlack text-white" : ""} !text-xs text-customBlack !px-[13.48px] max-xl:!-ml-4 !py-[5.84px] hover:!bg-customBlack hover:text-white`}
+              myClass={`${selectedCategory === "all" ? "bg-customBlack text-white" : ""} !text-xs text-customBlack !px-[13.48px] xl:!-ml-4 !py-[5.84px] hover:!bg-customBlack hover:text-white`}
               text="All"
             />
             <CustomButton
