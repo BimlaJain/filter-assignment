@@ -26,7 +26,7 @@ const Songs = () => {
     return (
         <div className='lg:pt-14 pt-5'>
             <div className='container'>
-                <h2 className='font-semibold lg:text-5xl md:text-4xl text-3xl text-black pb-[30px]'>Songs</h2>
+                <h2 className='font-semibold lg:text-5xl md:text-4xl text-3xl text-black xl:-mb-4'>Songs</h2>
                 <div className="md:flex justify-between items-center pb-[45px]">
                     <div className='lg:w-8/12 md:w-7/12 w-full max-lg:overflow-x-auto'>
                         <div className='overflow-x-auto whitespace-nowrap'>
@@ -34,7 +34,7 @@ const Songs = () => {
                                 <thead>
                                     <tr className='pb-[33px]'>
                                         <th></th>
-                                        <th className='font-semibold sm:text-sm text-xs text-black text-left sm:w-6/12 w-5/12 pb-[33px]'>Song</th>
+                                        <th className='font-semibold sm:text-sm text-xs text-black text-left sm:w-6/12 w-5/12 pb-[33px] '>Song</th>
                                         <th className='font-semibold sm:text-sm text-xs text-black text-left pb-[33px]'>Release Date</th>
                                         <th className='font-semibold sm:text-sm text-xs text-black pb-[33px] text-right'>Times Played</th>
                                     </tr>

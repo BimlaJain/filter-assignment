@@ -54,9 +54,9 @@ export const FOOTER_DATA = [
 ];
 
 export const SOCIAL_LINKS = [
-    { name: 'Facebook', url: 'https://www.facebook.com/', icon: 'facebook.svg' },
-    { name: 'Instagram', url: 'https://www.instagram.com/', icon: 'instagram.svg' },
-    { name: 'Youtube', url: 'https://www.instagram.com/', icon: 'youtube.svg' },
-    { name: 'Pinterest', url: 'https://in.pinterest.com/', icon: 'pinterest.svg' },
+    { title: 'Facebook', links: 'https://www.facebook.com/', icon: 'facebook.svg' },
+    { title: 'Instagram', links: 'https://www.instagram.com/', icon: 'instagram.svg' },
+    { title: 'Youtube', links: 'https://www.instagram.com/', icon: 'youtube.svg' },
+    { title: 'Pinterest', links: 'https://in.pinterest.com/', icon: 'pinterest.svg' },
 ];
 
