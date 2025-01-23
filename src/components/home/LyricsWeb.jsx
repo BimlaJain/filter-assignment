@@ -43,14 +43,14 @@ const Hero = () => {
   };
 
   return (
-    <div className="pt-[11px] pb-12 bg-off-white lg:h-screen">
+    <div className="pt-[11px] pb-12 bg-off-white">
       <div className="container mx-auto">
       <Header />
         <div className="flex xl:justify-center items-center gap-[15px] pt-[17px] max-xl:overflow-x-auto pb-2">
           <div className="flex items-center gap-[5px]">
             <CustomButton
               customOnClick={() => handleTextChange("all")}
-              myClass={`${selectedCategory === "all" ? "bg-customBlack text-white" : ""} !text-xs text-customBlack !px-[13.48px] xl:!-ml-4 !py-[5.84px] hover:!bg-customBlack hover:text-white`}
+              myClass={`${selectedCategory === "all" ? "bg-customBlack text-white" : ""} !text-xs text-customBlack !px-[13.48px] !py-[5.84px] hover:!bg-customBlack hover:text-white`}
               text="All"
             />
             <CustomButton
@@ -65,7 +65,7 @@ const Hero = () => {
             />
             <div className="relative">
               <CustomButton
-                customOnClick={toggleDropdown}
+                customOnClick={toggleDropdown} 
                 myClass={`${selectedCategory === "music" ? "bg-customBlack text-white" : ""} !text-xs text-customBlack !py-[5.84px] !px-[11px] hover:!bg-customBlack hover:text-white group flex items-center gap-[5px]`}
                 text="More"
                 icon={<DownArrow classStyle={`${selectedCategory === "music" ? "stroke-white" : ""} group-hover:stroke-white transition-all duration-300`} />}
@@ -99,7 +99,7 @@ const Hero = () => {
               <p
                 onClick={() => handleChange(item)}
                 key={index}
-                className={`flex items-center cursor-pointer hover:bg-customBlack size-[30px] justify-center rounded-full transition-all duration-300 hover:text-white hover:font-medium text-black text-xs leading-custom-xl ${selectedLetter === item.toUpperCase() ? "bg-customBlack text-white" : ""}`} // Apply active styles
+                className={`flex items-center cursor-pointer hover:bg-customBlack size-[30px] justify-center rounded-full transition-all duration-300 hover:text-white hover:font-medium text-black text-xs leading-custom-xl ${selectedLetter === item.toUpperCase() ? "bg-customBlack text-white" : ""}`} 
               >
                 {item}
               </p>
