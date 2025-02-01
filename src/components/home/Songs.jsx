@@ -26,7 +26,7 @@ const Songs = () => {
     return (
         <div className='lg:pt-14 pt-5'>
             <div className='container'>
-                <h2 className='font-semibold lg:text-5xl md:text-4xl text-3xl text-black xl:-mb-4'>Songs</h2>
+                <h2 className='font-semibold lg:text-5xl md:text-4xl text-3xl text-black xl:-mb-4 mb-5'>Songs</h2>
                 <div className="md:flex justify-between items-center pb-[45px]">
                     <div className='lg:w-8/12 md:w-7/12 w-full max-lg:overflow-x-auto'>
                         <div className='overflow-x-auto whitespace-nowrap'>
@@ -57,31 +57,21 @@ const Songs = () => {
                             <>
                                 <img src={imageUrl} alt="Selected" className='w-full h-full object-cover rounded-[20px]' />
                                 {showCrossIcon && (
-                                    <div
-                                        className='absolute top-2 right-2 text-white bg-black rounded-full cursor-pointer flex items-center justify-center'
-                                        style={{ width: '24px', height: '24px' }}
-                                        onClick={handleRemoveImage}
-                                    >
+                                    <div className='absolute top-2 right-2 text-white bg-black rounded-full cursor-pointer flex items-center justify-center' style={{ width: '24px', height: '24px' }}
+                                        onClick={handleRemoveImage} >
                                         <span style={{ fontSize: '18px', lineHeight: '24px' }}>×</span>
                                     </div>
                                 )}
                             </>
                         ) : (
-                            <div className='w-full h-full bg-blue text-sm font-normal text-center text-white rounded-[20px] flex items-center justify-center cursor-pointer' onClick={handleAddPlaceClick}>
-                                Add Place
+                            <div className='w-full h-full bg-blue text-sm font-normal text-center text-white rounded-[20px] flex items-center justify-center cursor-pointer' onClick={handleAddPlaceClick}> Add Place
                             </div>
                         )}
                     </div>
-                    <input
-                        type="file"
-                        id="fileInput"
-                        style={{ display: 'none' }}
-                        onChange={handleFileChange}
-                    />
+                    <input type="file" id="fileInput" style={{ display: 'none' }}  onChange={handleFileChange} />
                 </div>
             </div>
         </div>
     );
 };
-
 export default Songs;
