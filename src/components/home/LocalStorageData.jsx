@@ -80,8 +80,6 @@ export default function Form() {
                     </div>
                 </form>
             </div>
-
-            {/* Table Section */}
             {tableData.length > 0 && (
                 <div className="mt-10 bg-white p-6 rounded-xl shadow-lg">
                     <h3 className="text-xl font-semibold mb-4">User Data Table</h3>
