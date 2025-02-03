@@ -67,13 +67,13 @@ export default function Form() {
                     <div className="flex">
                         <button
                             type="submit"
-                            className="flex mx-auto text-center items-center justify-center bg-blue-500 text-black border-black border w-44 py-3 rounded-lg hover:bg-blue-600 transition-colors"
+                            className="flex mx-auto text-center items-center justify-center bg-blue-500 text-black border-black border w-44 py-3 rounded-lg hover:bg-black hover:text-white transition-all duration-300 ease-linear"
                         >
                             Submit
                         </button>
                         <button
                             type="submit"
-                            className="flex mx-auto text-center items-center justify-center bg-blue-500 text-black border-black border w-44 py-3 rounded-lg hover:bg-blue-600 transition-colors"
+                            className="flex mx-auto text-center items-center justify-center bg-blue-500 text-black border-black border w-44 py-3 rounded-lg hover:bg-black hover:text-white transition-all duration-300 ease-linear"
                         >
                             Edit
                         </button>
