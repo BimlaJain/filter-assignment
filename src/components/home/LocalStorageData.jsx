@@ -25,7 +25,7 @@ export default function Form() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (Object.values(formData).every(value => value.trim() !== "")) {
+         {
             const newData = [...tableData, formData];
             setTableData(newData);
             localStorage.setItem("userTableData", JSON.stringify(newData));
@@ -35,9 +35,7 @@ export default function Form() {
                 email: "",
                 address: ""
             });
-        } else {
-            alert("Please fill in all fields.");
-        }
+        } 
     };
 
     const handleDelete = () => {
